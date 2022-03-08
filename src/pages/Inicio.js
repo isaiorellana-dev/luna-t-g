@@ -1,8 +1,10 @@
 import React from "react";
+import MainBanner from "../components/MainBanner";
 
 const Inicio = () => {
   return (
     <React.Fragment>
+      <MainBanner />
       <h1>Todo a la puerta de tu casa</h1>
       <h3>
         Sitio web para el servicio de delivery <span>Luna To Go</span>
