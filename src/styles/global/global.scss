@@ -1,0 +1,59 @@
+@import "vars";
+
+body {
+  background-color: var(--background-white);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  font-size: 62.5%;
+}
+#root {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(@fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "Hubballi";
+  src: url(@fonts/Hubballi-Regular.ttf);
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url(@fonts/Inconsolata-VariableFont.ttf);
+}
+
+h1 {
+  font-family: "Bebas Neue";
+  color: var(--red);
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 7rem;
+  text-align: center;
+}
+h3 {
+  font-family: "Inconsolata";
+  color: var(--red);
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+p {
+  font-family: "Hubballi";
+  color: var(--red);
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 3rem;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
