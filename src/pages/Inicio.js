@@ -6,9 +6,9 @@ const Inicio = () => {
     <React.Fragment>
       <MainBanner />
       <h1>Todo a la puerta de tu casa</h1>
-      <h3>
+      <h2>
         Sitio web para el servicio de delivery <span>Luna To Go</span>
-      </h3>
+      </h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit non ipsam
         distinctio, molestiae ullam culpa dolorum consectetur at accusamus modi!

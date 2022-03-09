@@ -4,7 +4,7 @@ import "@styles/components/common/Button.scss";
 
 const Button = (props) => {
   return (
-    <Link to={props.link} className={props.className}>
+    <Link to={props.link} className={`btn-primary ${props.className}`}>
       {props.text}
     </Link>
   );
