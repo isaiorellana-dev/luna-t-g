@@ -1,34 +1,49 @@
 .MainBanner {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: auto;
   max-height: 550px;
   overflow: hidden;
+  background: url(@img/MainBanner.jpg) center no-repeat;
+  background-size: cover;
   .content {
+    width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.164);
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     h1 {
+      width: auto;
+      max-width: 330px;
       color: var(--background-white);
+      margin-top: 20px;
     }
     p {
       color: var(--background-white);
       font-weight: 700;
+      width: fit-content;
+      background-color: rgba(0, 0, 0, 0.205);
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+      padding: 0px 5px;
+      margin-bottom: 10px;
     }
     .MainBanner__button {
-      // position: absolute;
       width: fit-content;
+      margin-bottom: 20px;
     }
   }
   img {
     width: 100%;
     filter: brightness(0.9);
+  }
+}
+@media (min-width: 520px) {
+  .MainBanner {
+    height: 370px;
   }
 }
