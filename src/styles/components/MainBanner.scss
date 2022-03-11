@@ -1,17 +1,16 @@
 .MainBanner {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: auto;
   max-height: 550px;
   overflow: hidden;
-  background: url(@img/MainBanner.jpg) center no-repeat;
+  background: url(@img/banner-2.JPG) center no-repeat;
   background-size: cover;
   .content {
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.164);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,10 +24,10 @@
     p {
       color: var(--background-white);
       font-weight: 700;
-      width: fit-content;
-      background-color: rgba(0, 0, 0, 0.205);
-      backdrop-filter: blur(5px);
-      border-radius: 8px;
+      // width: fit-content;
+      // background-color: rgba(0, 0, 0, 0.205);
+      // backdrop-filter: blur(5px);
+      // border-radius: 8px;
       padding: 0px 5px;
       margin-bottom: 10px;
     }
@@ -37,13 +36,26 @@
       margin-bottom: 20px;
     }
   }
-  img {
-    width: 100%;
-    filter: brightness(0.9);
-  }
 }
 @media (min-width: 520px) {
   .MainBanner {
     height: 370px;
+  }
+}
+@media (max-width: 750px) {
+  .MainBanner {
+    height: 370px;
+    .content {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(56, 55, 55, 0.199);
+    }
+  }
+}
+@media (max-width: 920px) {
+  .MainBanner {
+    justify-content: center;
+    background: url(@img/banner-mobile.JPG) center no-repeat;
+    background-size: cover;
   }
 }
