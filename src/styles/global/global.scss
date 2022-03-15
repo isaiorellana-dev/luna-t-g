@@ -16,6 +16,7 @@ html {
 #root {
   height: 100vh;
   overflow-x: hidden;
+  background: url(@img/textura.png) repeat;
 }
 
 @font-face {
@@ -40,6 +41,14 @@ h1 {
   text-align: center;
 }
 h2 {
+  font-family: "Bebas Neue";
+  color: var(--red);
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 6rem;
+  text-align: center;
+}
+h3 {
   font-family: "Inconsolata";
   color: var(--red);
   font-size: 2.6rem;

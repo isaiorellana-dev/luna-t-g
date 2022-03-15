@@ -56,19 +56,19 @@ const Ventajas = () => {
               <div className="seguro__icon Ventajas__circle">
                 <img src={seguro} alt="seguro" />
               </div>
-              <h2>Seguro y confiable</h2>
+              <h3>Seguro y confiable</h3>
             </div>
             <div>
               <div className="profesional__icon Ventajas__circle">
                 <img src={profesional} alt="profesional" />
               </div>
-              <h2>Servicio profesional</h2>
+              <h3>Servicio profesional</h3>
             </div>
             <div>
               <div className="rapido__icon Ventajas__circle">
                 <img src={rapido} alt="rapido" />
               </div>
-              <h2>Ahorras tiempo y esfuerzo</h2>
+              <h3>Ahorras tiempo y esfuerzo</h3>
             </div>
           </div>
         </React.Fragment>
@@ -84,7 +84,7 @@ const Ventajas = () => {
                 <div className={`seguro__icon Ventajas__circle`}>
                   <img src={seguro} alt="seguro" />
                 </div>
-                <h2>Seguro y confiable</h2>
+                <h3>Seguro y confiable</h3>
               </div>
               <div
                 className={`container ${
@@ -94,7 +94,7 @@ const Ventajas = () => {
                 <div className={`profesional__icon Ventajas__circle`}>
                   <img src={profesional} alt="profesional" />
                 </div>
-                <h2>Servicio profesional</h2>
+                <h3>Servicio profesional</h3>
               </div>
               <div
                 className={`container ${
@@ -104,7 +104,7 @@ const Ventajas = () => {
                 <div className={`rapido__icon Ventajas__circle`}>
                   <img src={rapido} alt="rapido" />
                 </div>
-                <h2>Ahorras tiempo y esfuerzo</h2>
+                <h3>Ahorras tiempo y esfuerzo</h3>
               </div>
             </div>
             <Button
