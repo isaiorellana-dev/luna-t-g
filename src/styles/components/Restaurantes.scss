@@ -12,6 +12,10 @@
     justify-content: center;
     img {
       height: 330px;
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
   .restaurantes__right {

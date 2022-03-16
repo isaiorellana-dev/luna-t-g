@@ -16,10 +16,7 @@
 
 // * Code Runner
 // La extension que sirve para correr código JavaScript, solo seleccionas el código que querés correr haces un click derecho y seleccionas "Run Code"
-// Haz el intento con el código de la linea de abajo y vemos que pasa
-const numbers = Array.from({ length: 100 }, (v, k) => k + 1);
-console.log(numbers);
-
+// Haz el intento con el código de abajo y vemos que pasa
 const mensaje = "Esperando que venga el desarrollador";
 const desarrolladores = [
   {
