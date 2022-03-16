@@ -10,6 +10,7 @@
 // Alt + Z -> Si las lineas de código no caben horizontalmente usa este atajo se para que se ajuste a la pantalla
 // Ctrl + A -> Seleccionar todo el texto
 // Ctrl + / -> Comentar o des comentar una linea o selección
+// Ctrl + L -> Selecciona toda la línea actual
 // Ctrl + Shift + L -> Selecciona todas las palabras que coincidan con la selección actual //* Seleccionas una o mas palabras primero y luego presiona Ctrl + Shift + L
 // Ctrl + . -> Corrector ortográfico // * Funciona si tenes el cursor en una palabra que tenga un error ortográfico
 
