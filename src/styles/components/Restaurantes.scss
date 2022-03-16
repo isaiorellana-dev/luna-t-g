@@ -1,12 +1,24 @@
 .restaurantes {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  min-height: 250px;
+  min-height: 330px;
   padding: 10px;
+  &__left {
+    z-index: 1;
+    max-width: 360px;
+  }
   .restaurantes__right {
+    .daniel-bolsa {
+      height: 330px;
+      position: absolute;
+      top: 0;
+      left: -270px;
+    }
     .restaurantes__right--img-container {
+      position: relative;
+
       display: grid;
       grid-template-columns: 140px 140px 140px;
       grid-template-rows: 140px 140px;

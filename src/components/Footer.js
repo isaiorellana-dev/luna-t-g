@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "@img/logo.png";
 import "@styles/components/Footer.scss";
-import { useMobile } from "@hooks/useMobile.js";
 import instagram from "@icons/instagram.png";
 import facebook from "@icons/facebook.png";
 import WhatsApp from "@icons/whatsapp.png";

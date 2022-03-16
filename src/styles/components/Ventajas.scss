@@ -1,17 +1,19 @@
 .Ventajas__banner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 10px;
-  min-height: 300px;
+  min-height: 330px;
   overflow: hidden;
   .Ventajas__left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1 {
+    h2 {
       max-width: 350px;
     }
   }

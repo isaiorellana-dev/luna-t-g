@@ -5,6 +5,7 @@ import superpollos from "@img/superpollos.png";
 import chino from "@img/chino.png";
 import chyrs from "@img/chyrs.png";
 import profegrill from "@img/profe-grill.png";
+import danielBolsa from "@img/guillermo-chavito.png";
 import "@styles/components/Restaurantes.scss";
 
 const Restaurantes = () => {
@@ -19,6 +20,14 @@ const Restaurantes = () => {
       return false;
     }
   };
+  const isMobileDaniel = () => {
+    if (windowWidth < 730) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   return (
     <section className="restaurantes">
       <div className="restaurantes__left">
@@ -30,14 +39,19 @@ const Restaurantes = () => {
             <div className="img"></div>
           </div>
         ) : (
-          <div className="restaurantes__right--img-container">
-            <img src={internacional}></img>
-            <img src={superpollos}></img>
-            <img src={rosty}></img>
-            <img src={chino}></img>
-            <img src={chyrs}></img>
-            <img src={profegrill}></img>
-          </div>
+          <React.Fragment>
+            <div className="restaurantes__right--img-container">
+              <img src={internacional}></img>
+              <img src={superpollos}></img>
+              <img src={rosty}></img>
+              <img src={chino}></img>
+              <img src={chyrs}></img>
+              <img src={profegrill}></img>
+              {!isMobileDaniel() && (
+                <img className="daniel-bolsa" src={danielBolsa}></img>
+              )}
+            </div>
+          </React.Fragment>
         )}
       </div>
     </section>

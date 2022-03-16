@@ -44,7 +44,7 @@ const Ventajas = () => {
       {!isMobile() && (
         <React.Fragment>
           <div className="Ventajas__left">
-            <h1>Ventajas de utilizar nuestro servicio</h1>
+            <h2>Ventajas de utilizar nuestro servicio</h2>
             <Button
               className="Ventajas__button"
               text="llama ya!!"
