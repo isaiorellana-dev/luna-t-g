@@ -1,24 +1,26 @@
 .restaurantes {
+  position: relative;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 330px;
   padding: 10px;
   &__left {
-    z-index: 1;
-    max-width: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 330px;
+    }
   }
   .restaurantes__right {
-    .daniel-bolsa {
-      height: 330px;
-      position: absolute;
-      top: 0;
-      left: -270px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .restaurantes__right--img-container {
       position: relative;
-
       display: grid;
       grid-template-columns: 140px 140px 140px;
       grid-template-rows: 140px 140px;
@@ -82,6 +84,29 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .restaurantes {
+    &__left {
+      img {
+        width: 400px;
+        height: auto;
+      }
+    }
+  }
+}
+@media (max-width: 880px) {
+  .restaurantes {
+    flex-direction: column;
+    &__left {
+      img {
+        width: 100%;
+        max-width: 580px;
+      }
+    }
+  }
+}
+
 @keyframes restaurantes {
   0% {
     background: url(@img/inter.png) no-repeat center;
@@ -118,11 +143,5 @@
   }
   100% {
     background: url(@img/inter.png) no-repeat center;
-  }
-}
-
-@media (max-width: 700px) {
-  .restaurantes {
-    flex-direction: column;
   }
 }

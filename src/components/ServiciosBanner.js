@@ -8,9 +8,22 @@ import transacciones from "@img/transacciones.png";
 import ferreteria from "@img/ferreteria.png";
 import bebidas from "@img/bebidas.png";
 import comida from "@img/comida.png";
+import Background from "@containers/Background";
+
 import "@styles/components/ServiciosBanner.scss";
 
 const ServiciosBanner = () => {
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+
+  const isMobile = (size) => {
+    if (windowWidth < size) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   return (
     <section className="services-banner">
       <div className="services-banner__title-container">
@@ -26,6 +39,7 @@ const ServiciosBanner = () => {
         <IconServices src={comida} text="Comida" />
         <IconServices src={bebidas} text="Bebidas" />
       </div>
+      {!isMobile(1200) && <Background />}
     </section>
   );
 };

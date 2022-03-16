@@ -2,6 +2,7 @@ import React from "react";
 import Button from "@components/common/Button";
 import rapido from "@icons/reloj.svg";
 import seguro from "@icons/seguro.png";
+import Background from "@containers/Background";
 import profesional from "@icons/profesional.png";
 import "@styles/components/Ventajas.scss";
 
@@ -10,8 +11,8 @@ const Ventajas = () => {
 
   window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
 
-  const isMobile = () => {
-    if (windowWidth < 450) {
+  const isMobile = (size) => {
+    if (windowWidth < size) {
       return true;
     } else {
       return false;
@@ -41,8 +42,9 @@ const Ventajas = () => {
 
   return (
     <section className="Ventajas__banner">
-      {!isMobile() && (
+      {!isMobile(450) && (
         <React.Fragment>
+          {!isMobile(1420) && <Background />}
           <div className="Ventajas__left">
             <h2>Ventajas de utilizar nuestro servicio</h2>
             <Button
@@ -73,7 +75,7 @@ const Ventajas = () => {
           </div>
         </React.Fragment>
       )}
-      {isMobile() && (
+      {isMobile(450) && (
         <React.Fragment>
           <div className="Ventajas__left">
             <h1>Ventajas de utilizar nuestro servicio</h1>
