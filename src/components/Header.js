@@ -35,19 +35,29 @@ const Header = () => {
       <nav className={`${!isMobile(760) || toggleMenu ? null : "hide"}`}>
         <ul>
           <li>
-            <Link to="/">Inicio</Link>
+            <Link to="/" onClick={handleToggleMenu}>
+              Inicio
+            </Link>
           </li>
           <li>
-            <Link to="Servicios">Servicios</Link>
+            <Link to="Servicios" onClick={handleToggleMenu}>
+              Servicios
+            </Link>
           </li>
           <li>
-            <Link to="SobreNosotros">Sobre Nosotros</Link>
+            <Link to="SobreNosotros" onClick={handleToggleMenu}>
+              Sobre Nosotros
+            </Link>
           </li>
           <li>
-            <Link to="Personal">Personal</Link>
+            <Link to="Personal" onClick={handleToggleMenu}>
+              Personal
+            </Link>
           </li>
           <li>
-            <Link to="Contacto">Contacto</Link>
+            <Link to="Contacto" onClick={handleToggleMenu}>
+              Contacto
+            </Link>
           </li>
         </ul>
       </nav>
