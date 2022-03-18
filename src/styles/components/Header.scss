@@ -19,9 +19,13 @@ header {
         font-family: "Bebas Neue";
         margin-right: 30px;
         color: var(--background-white);
-      }
-      li:hover {
-        text-decoration: underline var(--yellow);
+        a {
+          text-decoration: none;
+          color: var(--background-white);
+          &:hover {
+            text-decoration: underline var(--yellow);
+          }
+        }
       }
     }
   }

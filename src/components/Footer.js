@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "@img/logo.png";
 import "@styles/components/Footer.scss";
 import instagram from "@icons/instagram.png";
@@ -32,11 +33,21 @@ const Footer = () => {
         <React.Fragment>
           <img src={logo}></img>
           <ul>
-            <li>Inicio</li>
-            <li>Servicios</li>
-            <li>Sobre Nosotros</li>
-            <li>Personal</li>
-            <li>Contacto</li>
+            <li>
+              <Link to="/">Inicio</Link>
+            </li>
+            <li>
+              <Link to="Servicios">Servicios</Link>
+            </li>
+            <li>
+              <Link to="SobreNosotros">Sobre Nosotros</Link>
+            </li>
+            <li>
+              <Link to="Personal">Personal</Link>
+            </li>
+            <li>
+              <Link to="Contacto">Contacto</Link>
+            </li>
           </ul>
           <div>
             <p>llamanos</p>

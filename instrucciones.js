@@ -6,6 +6,12 @@
 // TODO: Esto es un comentario para indicar una tarea
 // ! Esto es un comentario para indicar un error
 
+//* Orden de estilos
+// 1. Posicionamiento y Display (position, display, z-index)
+// 2. Dimensiones (width, height, etc)
+// 3. Fuentes (Cualquier configuración de texto)
+// 4. Visuales (Background, animaciones, overflow, filtros, etc)
+
 // * Atajos de teclado
 // Alt + Z -> Si las lineas de código no caben horizontalmente usa este atajo se para que se ajuste a la pantalla
 // Ctrl + A -> Seleccionar todo el texto

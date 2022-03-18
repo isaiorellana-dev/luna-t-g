@@ -1,5 +1,11 @@
 @import "vars";
 
+//* Orden de estilos
+// 1. Posicionamiento y Display (position, display, z-index)
+// 2. Dimensiones (width, height, etc)
+// 3. Fuentes (Cualquier configuración de texto)
+// 4. Visuales (Background, animaciones, overflow, filtros, etc)
+
 body {
   background-color: var(--background-white);
 }
@@ -31,6 +37,9 @@ html {
   font-family: "Inconsolata";
   src: url(@fonts/Inconsolata-VariableFont.ttf);
 }
+// main {
+//   padding: 10px 0px 10px 0px;
+// }
 
 h1 {
   font-family: "Bebas Neue";

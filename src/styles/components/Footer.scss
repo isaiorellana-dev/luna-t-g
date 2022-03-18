@@ -37,6 +37,13 @@ footer {
       font-family: "Bebas Neue", cursive;
       font-size: 2.2rem;
       text-align: center;
+      a {
+        text-decoration: none;
+        color: var(--background-white);
+        &:hover {
+          text-decoration: underline var(--yellow);
+        }
+      }
     }
   }
   img {

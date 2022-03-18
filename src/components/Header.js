@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "@styles/components/Header.scss";
 import logo from "@img/logo.png";
 
@@ -33,11 +34,21 @@ const Header = () => {
       <img src={logo}></img>
       <nav className={`${!isMobile(760) || toggleMenu ? null : "hide"}`}>
         <ul>
-          <li>Inicio</li>
-          <li>Servicios</li>
-          <li>Sobre Nosotros</li>
-          <li>Personal</li>
-          <li>Contacto</li>
+          <li>
+            <Link to="/">Inicio</Link>
+          </li>
+          <li>
+            <Link to="Servicios">Servicios</Link>
+          </li>
+          <li>
+            <Link to="SobreNosotros">Sobre Nosotros</Link>
+          </li>
+          <li>
+            <Link to="Personal">Personal</Link>
+          </li>
+          <li>
+            <Link to="Contacto">Contacto</Link>
+          </li>
         </ul>
       </nav>
       {
