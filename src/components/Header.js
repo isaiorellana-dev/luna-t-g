@@ -62,7 +62,7 @@ const Header = () => {
         </ul>
       </nav>
       {
-        //* Botón hamburguesa, se renderizaa solo si el tamaño de la ventana es menor a 760px. y contiene en el evento onClick la función para abrir o cerrar el menu.
+        //* Botón hamburguesa, se renderiza solo si el tamaño de la ventana es menor a 760px. y contiene en el evento onClick la función para abrir o cerrar el menu.
         isMobile(760) && (
           <button
             className={`${toggleMenu ? "equis" : "burger"}`}

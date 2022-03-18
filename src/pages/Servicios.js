@@ -6,31 +6,34 @@ import "@styles/pages/Servicios.scss";
 const Servicios = () => {
   return (
     <Fragment>
-      <section className="servicios__first-container">
-        <ServiciosCard
-          titulo="Envíos"
-          text="lorem ipsum dolor sit amet consectetur adipiscing elit vehicula
+      <section>
+        <h1>Nuestros Servicios:</h1>
+        <div className="servicios__first-container">
+          <ServiciosCard
+            titulo="Envíos"
+            text="lorem ipsum dolor sit amet consectetur adipiscing elit vehicula
             inceptos praesent sollicitudin iaculis imperdiet donec auctor
             potenti aenean rhoncus euismod diam elementum parturient integer
             convallis feugiat"
-          img={chavito}
-        />
-        <ServiciosCard
-          titulo="Compras"
-          text="lorem ipsum dolor sit amet consectetur adipiscing elit vehicula
+            img={chavito}
+          />
+          <ServiciosCard
+            titulo="Compras"
+            text="lorem ipsum dolor sit amet consectetur adipiscing elit vehicula
             inceptos praesent sollicitudin iaculis imperdiet donec auctor
             potenti aenean rhoncus euismod diam elementum parturient integer
             convallis feugiat"
-          img={chavito}
-        />
-        <ServiciosCard
-          titulo="Transacciones Bancarias"
-          text="lorem ipsum dolor sit amet consectetur adipiscing elit vehicula
+            img={chavito}
+          />
+          <ServiciosCard
+            titulo="Transacciones Bancarias"
+            text="lorem ipsum dolor sit amet consectetur adipiscing elit vehicula
             inceptos praesent sollicitudin iaculis imperdiet donec auctor
             potenti aenean rhoncus euismod diam elementum parturient integer
             convallis feugiat"
-          img={chavito}
-        />
+            img={chavito}
+          />
+        </div>
       </section>
       <section className="servicios__second-container">
         <div>
@@ -45,7 +48,8 @@ const Servicios = () => {
           <Button
             className="MainBanner__button"
             text="Llama Ya!!"
-            link="Servicios"
+            link="tel:+504 9450-4185"
+            routing={false}
           />
         </div>
       </section>

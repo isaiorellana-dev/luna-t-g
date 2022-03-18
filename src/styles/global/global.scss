@@ -37,9 +37,6 @@ html {
   font-family: "Inconsolata";
   src: url(@fonts/Inconsolata-VariableFont.ttf);
 }
-// main {
-//   padding: 10px 0px 10px 0px;
-// }
 
 h1 {
   font-family: "Bebas Neue";
@@ -52,9 +49,9 @@ h1 {
 h2 {
   font-family: "Bebas Neue";
   color: var(--red);
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 500;
-  line-height: 6rem;
+  line-height: 5rem;
   text-align: center;
   text-shadow: 2px 0px 0px var(--background-white);
 }

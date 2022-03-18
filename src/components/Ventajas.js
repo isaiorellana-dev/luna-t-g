@@ -50,7 +50,8 @@ const Ventajas = () => {
             <Button
               className="Ventajas__button"
               text="llama ya!!"
-              link="Contacto"
+              link="tel:+504 9450-4185"
+              routing={false}
             />
           </div>
           <div className="Ventajas__right">
@@ -78,7 +79,7 @@ const Ventajas = () => {
       {isMobile(450) && (
         <React.Fragment>
           <div className="Ventajas__left">
-            <h1>Ventajas de utilizar nuestro servicio</h1>
+            <h2>Ventajas de utilizar nuestro servicio</h2>
           </div>
           <div className="Ventajas__right slider">
             <div className="img--container">
@@ -112,7 +113,8 @@ const Ventajas = () => {
             <Button
               className="Ventajas__button"
               text="llama ya!!"
-              link="Contacto"
+              link="tel:+504 9450-4185"
+              routing={false}
             />
           </div>
         </React.Fragment>

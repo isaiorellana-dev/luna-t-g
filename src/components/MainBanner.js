@@ -13,6 +13,7 @@ const MainBanner = () => {
           className="MainBanner__button"
           text="Servicios"
           link="Servicios"
+          routing={false}
         />
       </div>
     </section>
