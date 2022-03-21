@@ -1,0 +1,31 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 500px;
+  label {
+    font-size: 2rem;
+    font-family: "Hubballi", monospace;
+    font-weight: 700;
+  }
+  .form__fase-1 {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form__fase-2 {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    .orden {
+      :nth-child(1) {
+        width: 50px;
+      }
+    }
+  }
+  .form__fase-3 {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -50,8 +50,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="Personal" onClick={handleToggleMenu}>
-              Personal
+            <Link to="Pedidos" onClick={handleToggleMenu}>
+              Pedidos
             </Link>
           </li>
           <li>
