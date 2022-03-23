@@ -1,5 +1,5 @@
 import React from "react";
-import ProductoList from "./common/Producto";
+import ProductoList from "./common/ProductoList";
 import "@styles/components/PedidosFormulario.scss";
 
 const PedidosFormulario = () => {
@@ -30,7 +30,7 @@ const PedidosFormulario = () => {
   };
 
   // console.table(productos);
-  console.table(producto);
+  // console.table(producto);
   const msg = () => {
     return `Hola, quiero hacer un pedido de ${tipoPedido} en ${negocio} voy a querer ${cantidadItem} ${producto}, por favor. Aguante la Xavineta!`;
   };
@@ -74,43 +74,7 @@ const PedidosFormulario = () => {
           required
           onChange={(e) => setNegocio(e.target.value)}
         ></input>
-        <div>
-          {productos.map((productos) => (
-            <div className="orden" key={productos.item}>
-              <input
-                type="number"
-                defaultValue="1"
-                onChange={handleInputChange}
-                name="cantidad"
-              ></input>
-              <input
-                name="producto"
-                type="text"
-                onChange={handleInputChange}
-                placeholder={
-                  (tipoPedido === "Comida" && "Pollo con tajadas") ||
-                  (tipoPedido === "Compras en supermercado, bodega o tienda" &&
-                    "3 Litros Pepsi") ||
-                  (tipoPedido === "Pedido listo en una tienda" &&
-                    "Mi producto") ||
-                  (tipoPedido === "Envió personalizado" && "Paquete")
-                }
-              ></input>
-            </div>
-          ))}
-        </div>
-        <button
-          type="button"
-          onClick={() => {
-            productos.push({
-              item: productos.length + 1,
-            });
-            setUpdateProducto(!updateProducto);
-            // console.table(productos);
-          }}
-        >
-          Agregar
-        </button>
+        <ProductoList />
       </div>
 
       {/* //* Fase 3: */}
