@@ -1,5 +1,5 @@
 import React from "react";
-import chavito from "@img/chavito-mochila.png";
+import grupal from "@img/grupal-1.png";
 import "@styles/pages/SobreNosotros.scss";
 
 const SobreNosotros = () => {
@@ -7,7 +7,7 @@ const SobreNosotros = () => {
     <section className="sobre-nosotros__container">
       <h1>Sobre Nosotros</h1>
       <div>
-        <img src={chavito}></img>
+        <img src={grupal}></img>
         <p>
           lorem ipsum dolor sit amet consectetur adipiscing elit montes rutrum
           placerat orci efficitur sed conubia vitae platea neque pretium
