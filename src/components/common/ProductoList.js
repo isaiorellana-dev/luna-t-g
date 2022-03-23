@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductoList = (props) => {
+const ProductoList = () => {
   const [productos, setProductos] = React.useState([
     {
       item: 1,
@@ -26,18 +26,17 @@ const ProductoList = (props) => {
     productos.length > 1 && setProductos(productos.slice(0, -1));
   };
 
-  const stringifyProductos = () => {
-    return productos.map((producto) => {
-      return ` ${producto.count} ${producto.name}${
-        producto.count > 1 ? "s" : ""
-      }`;
+  const productoToString = () => {
+    let productosString = "";
+    productos.forEach((producto) => {
+      productosString += `${producto.count} ${producto.name}%0A`;
     });
+    return productosString;
   };
 
   const msg = () => {
-    return `Hola, hagame el siguiente pedido por favor${stringifyProductos()}`;
+    return `%0A${productoToString()}`;
   };
-  console.log(msg());
 
   const URL = () => {
     return `https://api.whatsapp.com/send?phone="+50499391712"&text=${msg()}&source=&data=`;
@@ -46,7 +45,6 @@ const ProductoList = (props) => {
     window.open(URL(), "_blank");
   };
 
-  console.table(productos);
   return (
     <div>
       <h1>ProductoList</h1>
@@ -57,7 +55,6 @@ const ProductoList = (props) => {
             defaultValue="1"
             onChange={(e) => {
               replaceCantidad(producto.item - 1, e);
-              console.table(productos);
             }}
           ></input>
           <input
@@ -65,8 +62,6 @@ const ProductoList = (props) => {
             placeholder="ingresa un producto"
             onChange={(e) => {
               replaceProducto(producto.item - 1, e);
-              console.log(msg());
-              console.table(productos);
             }}
           ></input>
         </div>
@@ -81,14 +76,6 @@ const ProductoList = (props) => {
         }}
       >
         eliminar
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          enviar();
-        }}
-      >
-        enviar
       </button>
     </div>
   );

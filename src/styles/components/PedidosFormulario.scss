@@ -2,9 +2,10 @@ form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  margin-bottom: 10px;
   width: 500px;
   label {
-    font-size: 2rem;
+    font-size: 2.6rem;
     font-family: "Hubballi", monospace;
     font-weight: 700;
   }
@@ -12,11 +13,73 @@ form {
     margin: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    label {
+      font-size: 2.6rem;
+    }
+    :nth-child(2) {
+      font-size: 2rem;
+      margin: 5px;
+      width: 280px;
+    }
+    :nth-child(3) {
+      margin: 5px;
+      width: fit-content;
+    }
   }
   .form__fase-2 {
     margin: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &--negocio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      label {
+        font-size: 2.6rem;
+      }
+      :nth-child(2) {
+        font-size: 2rem;
+        margin: 5px;
+        width: 280px;
+      }
+    }
+
+    &--producto {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      .producto-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 2rem;
+        :nth-child(1) {
+          margin: 5px;
+          width: 40px;
+          font-size: 2rem;
+        }
+        :nth-child(2) {
+          margin: 5px;
+          width: 280px;
+          font-size: 2rem;
+        }
+      }
+      .add-delete__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        button {
+          width: fit-content;
+        }
+      }
+    }
     .orden {
       :nth-child(1) {
         width: 50px;
@@ -27,5 +90,19 @@ form {
     margin: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    label {
+      font-size: 2.6rem;
+      margin: 5px;
+    }
+    input {
+      margin: 5px;
+      font-size: 2rem;
+    }
+    button {
+      margin: 5px;
+      width: fit-content;
+    }
   }
 }

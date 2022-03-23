@@ -73,3 +73,17 @@ p {
   max-width: 400px;
   margin: 0 auto;
 }
+
+button {
+  font-family: "Inconsolata";
+  text-transform: uppercase;
+  color: var(--background-white);
+  background-color: var(--red);
+  padding: 8px;
+  border: solid var(--yellow) 5px;
+  border-radius: 8px;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+}
