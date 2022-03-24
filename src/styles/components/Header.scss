@@ -19,10 +19,14 @@ header {
         font-family: "Bebas Neue";
         margin-right: 30px;
         color: var(--background-white);
+        .link-activo {
+          text-decoration: underline var(--yellow);
+        }
         a {
           text-decoration: none;
           color: var(--background-white);
           &:hover {
+            color: var(--yellow);
             text-decoration: underline var(--yellow);
           }
         }

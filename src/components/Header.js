@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "@styles/components/Header.scss";
 import logo from "@img/logo.png";
 
@@ -35,29 +35,59 @@ const Header = () => {
       <nav className={`${!isMobile(760) || toggleMenu ? null : "hide"}`}>
         <ul>
           <li>
-            <Link to="/" onClick={handleToggleMenu}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "link-activo" : undefined
+              }
+              onClick={handleToggleMenu}
+            >
               Inicio
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="Servicios" onClick={handleToggleMenu}>
+            <NavLink
+              to="Servicios"
+              className={({ isActive }) =>
+                isActive ? "link-activo" : undefined
+              }
+              onClick={handleToggleMenu}
+            >
               Servicios
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="SobreNosotros" onClick={handleToggleMenu}>
+            <NavLink
+              to="SobreNosotros"
+              className={({ isActive }) =>
+                isActive ? "link-activo" : undefined
+              }
+              onClick={handleToggleMenu}
+            >
               Sobre Nosotros
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="Pedidos" onClick={handleToggleMenu}>
+            <NavLink
+              to="Pedidos"
+              className={({ isActive }) =>
+                isActive ? "link-activo" : undefined
+              }
+              onClick={handleToggleMenu}
+            >
               Pedidos
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="Contacto" onClick={handleToggleMenu}>
+            <NavLink
+              to="Contacto"
+              className={({ isActive }) =>
+                isActive ? "link-activo" : undefined
+              }
+              onClick={handleToggleMenu}
+            >
               Contacto
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
