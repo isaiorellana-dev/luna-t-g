@@ -66,7 +66,7 @@ p {
   font-family: "Hubballi";
   color: var(--red);
   font-size: 2.4rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 3rem;
   text-align: center;
   width: 100%;
@@ -88,7 +88,6 @@ button {
   margin: 0 auto;
   &:hover {
     animation: moving 0.3s;
-    border: solid var(--yellow) 7px;
     transition: 0.2s;
   }
 }
