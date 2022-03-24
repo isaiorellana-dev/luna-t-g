@@ -79,11 +79,16 @@ button {
   text-transform: uppercase;
   color: var(--background-white);
   background-color: var(--red);
-  padding: 8px;
+  padding: 4px;
   border: solid var(--yellow) 5px;
   border-radius: 8px;
   font-size: 2.6rem;
   font-weight: 700;
   text-align: center;
   margin: 0 auto;
+  &:hover {
+    animation: moving 0.3s;
+    border: solid var(--yellow) 7px;
+    transition: 0.2s;
+  }
 }

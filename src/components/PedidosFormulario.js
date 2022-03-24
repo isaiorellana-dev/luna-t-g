@@ -3,6 +3,7 @@ import ProductoList from "./common/ProductoList";
 import "@styles/components/PedidosFormulario.scss";
 
 const PedidosFormulario = () => {
+  const [fase, setFase] = React.useState(1);
   const [tipoPedido, setTipoPedido] = React.useState("Comida");
   const [negocio, setNegocio] = React.useState("");
   const [nombre, setNombre] = React.useState("");
@@ -52,23 +53,35 @@ const PedidosFormulario = () => {
   };
 
   const sendMessage = () => {
-    if (negocio === "") {
-      return null;
-    } else if (nombre === "") {
-      return null;
+    if (nombre === "") {
+      return alert("Por favor ingrese su nombre");
     } else if (direccion === "") {
-      return null;
-    } else if (productos.some((productos) => productos.name === "")) {
-      return null;
+      return alert("Por favor ingrese su dirección");
     } else {
       enviar();
     }
   };
 
   return (
-    <form>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
+      <button
+        className={fase === 1 ? "fase-inactiva" : "volver-btn"}
+        onClick={() => {
+          (fase === 3 && setFase(2)) || (fase === 2 && setFase(1));
+        }}
+      >
+        Volver
+      </button>
       {/* //* Fase 1: */}
-      <div className="form__fase-1">
+      <div
+        className={`form__fase-1 ${
+          fase === 1 ? "fase-activa" : "fase-inactiva"
+        }`}
+      >
         <label htmlFor="tipo-de-pedido">Selecciona el tipo de Pedido</label>
         <select
           name="tipo-de-pedido"
@@ -81,10 +94,21 @@ const PedidosFormulario = () => {
           <option>Pedido listo en una tienda</option>
           <option id="select-1647884067556-3">Envió personalizado</option>
         </select>
-        <button type="button">Continuar</button>
+        <button
+          type="button"
+          onClick={() => {
+            setFase(2);
+          }}
+        >
+          Continuar
+        </button>
       </div>
       {/* //* Fase 2: */}
-      <div className="form__fase-2">
+      <div
+        className={`form__fase-2 ${
+          fase === 2 ? "fase-activa" : "fase-inactiva"
+        }`}
+      >
         <div className="form__fase-2--negocio">
           <label htmlFor="negocio">
             {(tipoPedido === "Comida" && "Restaurante") ||
@@ -148,7 +172,11 @@ const PedidosFormulario = () => {
       </div>
 
       {/* //* Fase 3: */}
-      <div className="form__fase-3">
+      <div
+        className={`form__fase-3 ${
+          fase === 3 ? "fase-activa" : "fase-inactiva"
+        }`}
+      >
         <label htmlFor="nombre">A nombre de quien ira el pedido?</label>
         <input
           type="text"
@@ -164,13 +192,21 @@ const PedidosFormulario = () => {
         ></input>
       </div>
       <button
-        placeholder="Escribe aquí la direccion"
         type="submit"
         onClick={() => {
-          sendMessage();
+          if (negocio === "") {
+            return null;
+          } else if (productos.some((productos) => productos.name === "")) {
+            return null;
+          } else if (fase === 2) {
+            setFase(3);
+          } else {
+            sendMessage();
+          }
         }}
+        className={fase === 1 ? "fase-inactiva" : undefined}
       >
-        Pedir
+        {(fase === 3 && "Pedir") || (fase === 2 && "Continuar")}
       </button>
     </form>
   );

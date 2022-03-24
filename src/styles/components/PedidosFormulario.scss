@@ -1,17 +1,35 @@
 form {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   margin-bottom: 10px;
-  width: 500px;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  backdrop-filter: blur(3px);
+  border: solid 5px var(--yellow);
+  border-radius: 8px;
+  .volver-btn {
+    position: absolute;
+    bottom: 10px;
+    filter: saturate(0.8);
+    font-size: 1.8rem;
+  }
   label {
     font-size: 2.6rem;
     font-family: "Hubballi", monospace;
     font-weight: 700;
   }
+  .fase-activa {
+    display: flex;
+  }
+  .fase-inactiva {
+    display: none;
+  }
   .form__fase-1 {
     margin: 10px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     label {
@@ -29,7 +47,6 @@ form {
   }
   .form__fase-2 {
     margin: 10px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -75,9 +92,20 @@ form {
         justify-content: center;
         align-items: center;
         width: 300px;
-        button {
-          width: fit-content;
+        :nth-child(1) {
+          font-size: 2rem;
+          color: green;
+          background-color: var(--background-white);
         }
+        :nth-child(2) {
+          font-size: 2rem;
+          color: red;
+          background-color: var(--background-white);
+        }
+      }
+      button {
+        margin: 5px;
+        width: fit-content;
       }
     }
     .orden {
@@ -88,7 +116,6 @@ form {
   }
   .form__fase-3 {
     margin: 10px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
