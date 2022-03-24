@@ -13,9 +13,10 @@ form {
   border-radius: 8px;
   .volver-btn {
     position: absolute;
-    bottom: 10px;
-    filter: saturate(0.8);
-    font-size: 1.8rem;
+    bottom: 5px;
+    left: 5px;
+    filter: saturate(0.5);
+    font-size: 1.5rem;
   }
   label {
     font-size: 2.6rem;
@@ -38,11 +39,14 @@ form {
     :nth-child(2) {
       font-size: 2rem;
       margin: 5px;
-      width: 280px;
+      width: 100%;
+      min-width: 200px;
+      max-width: 300px;
     }
     :nth-child(3) {
       margin: 5px;
       width: fit-content;
+      font-size: 2rem;
     }
   }
   .form__fase-2 {
@@ -60,7 +64,9 @@ form {
       :nth-child(2) {
         font-size: 2rem;
         margin: 5px;
-        width: 280px;
+        width: 100%;
+        min-width: 200px;
+        max-width: 300px;
       }
     }
 
@@ -82,7 +88,9 @@ form {
         }
         :nth-child(2) {
           margin: 5px;
-          width: 280px;
+          width: 70%;
+          min-width: 180px;
+          max-width: 300px;
           font-size: 2rem;
         }
       }
@@ -126,10 +134,32 @@ form {
     input {
       margin: 5px;
       font-size: 2rem;
+      width: 100%;
     }
     button {
       margin: 5px;
       width: fit-content;
+    }
+  }
+  .button-continuar {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 340px) {
+  form {
+    .form__fase-2 {
+      &--producto {
+        .producto-item {
+          :nth-child(2) {
+            width: 60%;
+          }
+        }
+      }
+    }
+    .form__fase-3 {
+      input {
+        width: 100%;
+      }
     }
   }
 }

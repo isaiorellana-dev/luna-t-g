@@ -52,16 +52,6 @@ const PedidosFormulario = () => {
     window.open(URL(), "_blank");
   };
 
-  const sendMessage = () => {
-    if (nombre === "") {
-      return alert("Por favor ingrese su nombre");
-    } else if (direccion === "") {
-      return alert("Por favor ingrese su dirección");
-    } else {
-      enviar();
-    }
-  };
-
   return (
     <form
       onSubmit={(e) => {
@@ -198,13 +188,21 @@ const PedidosFormulario = () => {
             return null;
           } else if (productos.some((productos) => productos.name === "")) {
             return null;
+          } else if (productos.some((productos) => productos.count < 1)) {
+            return null;
           } else if (fase === 2) {
             setFase(3);
+          } else if (nombre === "") {
+            return alert("Por favor ingrese su nombre");
+          } else if (direccion === "") {
+            return alert("Por favor ingrese su dirección");
           } else {
-            sendMessage();
+            enviar();
           }
         }}
-        className={fase === 1 ? "fase-inactiva" : undefined}
+        className={`${
+          fase === 1 ? "fase-inactiva" : undefined
+        } button-continuar `}
       >
         {(fase === 3 && "Pedir") || (fase === 2 && "Continuar")}
       </button>
