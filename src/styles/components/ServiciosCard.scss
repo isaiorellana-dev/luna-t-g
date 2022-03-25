@@ -5,6 +5,7 @@ article {
   //! Solución temporal para centrar
   margin: 0 auto;
   padding: 10px;
+  border: 5px var(--yellow);
   .text-container {
     display: flex;
     flex-direction: column;
@@ -21,13 +22,13 @@ article {
     justify-content: center;
     align-items: center;
     order: 1;
-    border-radius: 50px;
+    border-radius: 8px;
     overflow: hidden;
-    padding: 5px;
+
     img {
       max-width: 290px;
-      border-radius: 25%;
-      filter: saturate(0.2);
+      // border-radius: 25%;
+      filter: saturate(0.4);
       transition: 0.5s;
       &:hover {
         filter: saturate(1);
@@ -36,12 +37,25 @@ article {
     }
   }
 }
+.servicios__card--transacciones {
+  .img-container {
+    overflow: visible;
+    img {
+      height: 100%;
+      width: auto;
+      &:hover {
+        filter: saturate(1);
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
 @media (max-width: 750px) {
   article {
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    // margin: 0px 5px 10px 5px;
     margin-bottom: 10px;
     border: 5px var(--yellow);
     border-style: solid;
@@ -55,6 +69,8 @@ article {
       img {
         width: 100%;
         max-width: 410px;
+        border-radius: 0;
+        filter: saturate(1);
       }
     }
     .text-container {

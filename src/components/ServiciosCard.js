@@ -2,10 +2,10 @@ import { React, Fragment } from "react";
 
 import "@styles/components/ServiciosCard.scss";
 
-const ServiciosCard = ({ titulo, text, img }) => {
+const ServiciosCard = ({ titulo, text, img, clase }) => {
   return (
     <Fragment>
-      <article>
+      <article className={clase}>
         <div className="text-container">
           <h2>{titulo}</h2>
           <p>{text}</p>
