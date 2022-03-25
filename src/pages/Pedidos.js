@@ -1,5 +1,6 @@
 import React from "react";
 import PedidosFormulario from "@components/PedidosFormulario";
+import PedidosMockup from "@components/PedidosMockup";
 import "@styles/pages/Pedidos.scss";
 
 const Pedidos = () => {
@@ -9,8 +10,15 @@ const Pedidos = () => {
         <div className="pedidos__form-container">
           <h1>Pedidos</h1>
           <PedidosFormulario />
+          <p>
+            Para realizar un pedido, solo debes llenar el formulario y enviarlo,
+            te generara un mensaje de WhatsApp con todo los datos que
+            necesitamos para realizar el envió.
+          </p>
         </div>
-        <div></div>
+      </section>
+      <section className="pedidos__mockup-container">
+        <PedidosMockup />
       </section>
     </div>
   );

@@ -204,7 +204,7 @@ const PedidosFormulario = () => {
           fase === 1 ? "fase-inactiva" : undefined
         } button-continuar `}
       >
-        {(fase === 3 && "Pedir") || (fase === 2 && "Continuar")}
+        {(fase === 3 && "Enviar") || (fase === 2 && "Continuar")}
       </button>
     </form>
   );

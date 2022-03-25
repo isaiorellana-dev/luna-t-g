@@ -1,0 +1,12 @@
+.mockup-img {
+  margin: 0px 20px 0px 40px;
+  width: 250px;
+  filter: drop-shadow(25px 25px 12px rgba(0, 0, 0, 0.473));
+}
+@media (max-width: 768px) {
+  .mockup-img {
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+  }
+}
