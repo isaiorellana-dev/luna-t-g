@@ -148,6 +148,7 @@ form {
 @media (max-width: 340px) {
   form {
     .form__fase-2 {
+      width: 200px;
       &--producto {
         .producto-item {
           :nth-child(2) {
