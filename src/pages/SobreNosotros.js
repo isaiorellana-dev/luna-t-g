@@ -9,27 +9,37 @@ const SobreNosotros = () => {
       <div>
         <img src={grupal}></img>
         <p>
-          lorem ipsum dolor sit amet consectetur adipiscing elit montes rutrum
-          placerat orci efficitur sed conubia vitae platea neque pretium
-          venenatis turpis eros libero pellentesque tincidunt interdum lectus
-          porta facilisi odio quam magna sagittis accumsan aliquam nullam diam
-          nec pulvinar sapien gravida fringilla nam nunc suspendisse fames at
-          donec tortor justo hac ac quis tempus dictumst vestibulum sociosqu
-          luctus congue laoreet ex elementum dapibus praesent enim litora metus
-          ligula lacus nascetur iaculis sodales tristique class facilisis
-          aliquet lacinia tempor cursus himenaeos auctor arcu mattis nisi nostra
-          potenti mollis ullamcorper penatibus molestie sollicitudin aptent sem
-          maecenas convallis posuere ad dignissim magnis velit
+          Luna to go es un servicio de delivery, fundado en 2020 por Roger Luna
+          en la ciudad de Morazan, Yoro. Brindando a la comunidad local una
+          solucion efectiva para realizar envios de forma rápida, segura y lo
+          mas importante sin tener que salir de casa. Luna To Go contribuyo a
+          que el comercio siguiera saliendo adelante a pesar de la pandemia, ya
+          que durante la cuarentena la gente no podia ir a lugares cerrados ni
+          hacer aglomeraciones, pero la gente necesitaba realizar compras, hacer
+          envíos, mandados... etc,
         </p>
         <p>
-          lorem ipsum dolor sit amet consectetur adipiscing elit montes rutrum
-          placerat orci efficitur sed conubia vitae platea neque pretium
-          venenatis turpis eros libero pellentesque tincidunt interdum lectus
-          porta facilisi odio quam magna sagittis accumsan aliquam nullam diam
-          nec pulvinar sapien gravida fringilla nam nunc suspendisse fames at
-          donec tortor justo hac ac quis tempus dictumst vestibulum sociosqu
-          luctus congue laoreet ex elementu
+          Para todos esos problemas estuvo Luna to go dando una solución que le
+          quitara a la gente el riesgo de exponerse ante el virus. El negocio ha
+          sido no solo un éxito para nosotros si no también es un recurso mas
+          para los negocios de la comunidad, con el éxito y crecimiento de
+          nuestro servicio ha surgido una nueva oportunidad de empleo para
+          muchos jóvenes de la ciudad.
         </p>
+        <div>
+          <h2>Misión</h2>
+          <p>
+            Brindar un servicio de entrega de forma rápida, segura y confiable,
+            con una solución efectiva para realizar envios de forma rápida,
+            segura y lo mas importante sin tener que salir de casa.
+          </p>
+          <h2>Visión</h2>
+          <p>
+            Ser una empresa líder en el mercado de delivery, con una solución
+            efectiva para realizar envios de forma rápida, segura y lo mas
+            importante sin tener que salir de casa.
+          </p>
+        </div>
       </div>
     </section>
   );
