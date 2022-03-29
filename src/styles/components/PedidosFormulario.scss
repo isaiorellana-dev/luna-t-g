@@ -36,17 +36,12 @@ form {
     label {
       font-size: 2.6rem;
     }
-    :nth-child(2) {
+    select {
       font-size: 2rem;
       margin: 5px;
       width: 100%;
       min-width: 200px;
       max-width: 300px;
-    }
-    :nth-child(3) {
-      margin: 5px;
-      width: fit-content;
-      font-size: 2rem;
     }
   }
   .form__fase-2 {

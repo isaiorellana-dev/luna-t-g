@@ -1,10 +1,11 @@
 import React from "react";
-import ProductoList from "./common/ProductoList";
+
 import "@styles/components/PedidosFormulario.scss";
 
 const PedidosFormulario = () => {
   const [fase, setFase] = React.useState(1);
   const [tipoPedido, setTipoPedido] = React.useState("Comida");
+  const [lugar, setLugar] = React.useState("Morazán");
   const [negocio, setNegocio] = React.useState("");
   const [nombre, setNombre] = React.useState("");
   const [direccion, setDireccion] = React.useState("");
@@ -45,8 +46,16 @@ const PedidosFormulario = () => {
     return `Hola, quiero hacer un pedido en ${negocio}:%0A${productoToString()}A nombre de: *${nombre}*%0ADireccion: ${direccion}`;
   };
 
+  const phone = () => {
+    if (lugar === "Morazán") {
+      return "+50494504185";
+    } else {
+      return "+50496352170";
+    }
+  };
+
   const URL = () => {
-    return `https://api.whatsapp.com/send?phone="+50499391712"&text=${msg()}&source=&data=`;
+    return `https://api.whatsapp.com/send?phone=${phone()}&text=${msg()}&source=&data=`;
   };
   const enviar = () => {
     window.open(URL(), "_blank");
@@ -72,6 +81,17 @@ const PedidosFormulario = () => {
           fase === 1 ? "fase-activa" : "fase-inactiva"
         }`}
       >
+        <label htmlFor="tipo-de-pedido">Selecciona el lugar</label>
+        <select
+          name="lugar"
+          id="lugar"
+          required
+          onChange={(e) => setLugar(e.target.value)}
+        >
+          <option>Morazán</option>
+          <option>El Negrito</option>
+        </select>
+
         <label htmlFor="tipo-de-pedido">Selecciona el tipo de Pedido</label>
         <select
           name="tipo-de-pedido"
@@ -82,8 +102,9 @@ const PedidosFormulario = () => {
           <option>Comida</option>
           <option>Compras en supermercado, bodega o tienda</option>
           <option>Pedido listo en una tienda</option>
-          <option id="select-1647884067556-3">Envió personalizado</option>
+          <option>Envió personalizado</option>
         </select>
+
         <button
           type="button"
           onClick={() => {

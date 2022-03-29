@@ -26,12 +26,14 @@ const Footer = () => {
           <div className="social">
             <img src={instagram}></img>
             <img src={facebook}></img>
-            <img src={WhatsApp}></img>
+            {/* <img src={WhatsApp}></img> */}
           </div>
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <img src={logo}></img>
+          <Link to="/">
+            <img src={logo}></img>
+          </Link>
           <ul>
             <li>
               <Link to="/">Inicio</Link>
@@ -46,21 +48,27 @@ const Footer = () => {
               <Link to="Pedidos">Pedidos</Link>
             </li>
             <li>
-              <Link to="Contacto">Contacto</Link>
+              <Link to="Personal">Personal</Link>
             </li>
           </ul>
           <div>
             <p>llamanos</p>
             <ul>
               <li>
-                <a href="tel:+504 9450-4185">+504 9450-4185</a>
+                <a href="tel:+504 9450-4185">Morazán: +504 9450-4185</a>
+              </li>
+              <li>
+                <a href="tel:+504 9635-2170">El Negrito: +504 9635-2170</a>
               </li>
             </ul>
           </div>
           <div className="social">
-            <img src={instagram}></img>
-            <img src={facebook}></img>
-            <img src={WhatsApp}></img>
+            <a href="https://www.instagram.com/luna.togo/">
+              <img src={instagram}></img>
+            </a>
+            <a href="https://www.facebook.com/Luna-To-Go-100482718981784">
+              <img src={facebook}></img>
+            </a>
           </div>
         </React.Fragment>
       )}

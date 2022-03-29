@@ -48,6 +48,10 @@ footer {
   }
   img {
     width: 70px;
+    &:hover {
+      animation: moving 0.3s;
+      transition: 0.2s;
+    }
   }
   .social {
     display: flex;

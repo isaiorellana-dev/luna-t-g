@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "@styles/components/Header.scss";
 import logo from "@img/logo.png";
 
@@ -31,7 +31,9 @@ const Header = () => {
 
   return (
     <header>
-      <img src={logo}></img>
+      <Link to="/">
+        <img src={logo}></img>
+      </Link>
       <nav className={`${!isMobile(760) || toggleMenu ? null : "hide"}`}>
         <ul>
           <li>
@@ -80,13 +82,13 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="Contacto"
+              to="Personal"
               className={({ isActive }) =>
                 isActive ? "link-activo" : undefined
               }
               onClick={handleToggleMenu}
             >
-              Contacto
+              Personal
             </NavLink>
           </li>
         </ul>
