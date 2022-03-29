@@ -8,11 +8,11 @@ const MainBanner = () => {
     <section className="MainBanner">
       <div className="content">
         <h1>envíos hasta la puerta de tu casa</h1>
-        <p>Conoce a fondo nuestro servicio:</p>
+        <p>Haz tu pedido ya llenando nuestro formulario:</p>
         <Button
           className="MainBanner__button"
-          text="Servicios"
-          link="/Servicios"
+          text="Pide Ahora"
+          link="/Pedidos"
           routing={true}
         />
       </div>

@@ -112,9 +112,9 @@ const Ventajas = () => {
             </div>
             <Button
               className="Ventajas__button"
-              text="llama ya!!"
-              link="tel:+504 9450-4185"
-              routing={false}
+              text="servicios"
+              link="/Servicios"
+              routing={true}
             />
           </div>
         </React.Fragment>

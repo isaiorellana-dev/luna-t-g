@@ -69,9 +69,9 @@ const Servicios = () => {
           <h2>¿Qué esperas?</h2>
           <Button
             className="MainBanner__button"
-            text="Llama Ya!!"
-            link="tel:+504 9450-4185"
-            routing={false}
+            text="Pide Ya!!"
+            link="/Pedidos"
+            routing={true}
           />
         </div>
       </section>

@@ -4,3 +4,23 @@
   background: url(@img/banner-2.JPG) center no-repeat;
   background-size: cover;
 }
+.personal__img-container {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-items: center;
+  img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media (max-width: 700px) {
+  .personal__img-container {
+    grid-template-columns: 100%;
+    img {
+      margin-bottom: 10px;
+    }
+  }
+}
