@@ -3,7 +3,7 @@
   height: 400px;
   background: url(@img/banner-personal.jpg) center no-repeat;
   background-size: cover;
-  h1{
+  h1 {
     color: var(--background-white);
     text-shadow: 2px 0px 0px var(--red);
   }
@@ -15,7 +15,7 @@
   grid-template-columns: 50% 50%;
   align-items: center;
   justify-items: center;
-   max-width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   img {
     width: 100%;
