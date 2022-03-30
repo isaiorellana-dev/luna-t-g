@@ -10,10 +10,10 @@ const SobreNosotros = () => {
       <h1>Sobre Nosotros</h1>
       <div>
         <picture>
-          <source media="(min-width: 900px)" srcSet="{grupalMedium}" />
-          <source media="(min-width: 600px)" srcSet="{grupalBig}" />
-          <source media="(min-width: 400px)" srcSet="{grupalMedium}" />
-          <img src="{grupalShort}" alt="Luna to go Personal" />
+          <source media="(min-width: 900px)" srcSet={grupalMedium}></source>
+          <source media="(min-width: 600px)" srcSet={grupalBig}></source>
+          <source media="(min-width: 400px)" srcSet={grupalMedium}></source>
+          <img src={grupalShort} alt="Luna to go Personal"></img>
         </picture>
 
         <div>
