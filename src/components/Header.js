@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "@styles/components/Header.scss";
-import logo from "@img/logo.png";
+import logo from "@img/logo-horizontal.png";
 
 const Header = () => {
   //* Estados de React
