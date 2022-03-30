@@ -1,8 +1,12 @@
 .personal-banner {
   width: 100%;
   height: 400px;
-  background: url(@img/banner-2.JPG) center no-repeat;
+  background: url(@img/banner-personal.jpg) center no-repeat;
   background-size: cover;
+  h1{
+    color: var(--background-white);
+    text-shadow: 2px 0px 0px var(--red);
+  }
 }
 .personal__img-container {
   padding: 10px;
@@ -11,6 +15,8 @@
   grid-template-columns: 50% 50%;
   align-items: center;
   justify-items: center;
+   max-width: 1000px;
+  margin: 0 auto;
   img {
     width: 100%;
     max-width: 400px;

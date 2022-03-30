@@ -24,6 +24,7 @@ const SobreNosotros = () => {
           </p>
         </div>
         <h2>Nuestra Historia</h2>
+        <div>
         <p>
           Luna to go es un servicio de delivery, fundado en 2020 por Roger Luna
           en la ciudad de Morazán, Yoro. Brindando a la comunidad local una
@@ -39,6 +40,7 @@ const SobreNosotros = () => {
           éxito y crecimiento de nuestro servicio ha surgido una nueva
           oportunidad de empleo para muchos jóvenes de la ciudad.
         </p>
+        </div>
       </div>
     </section>
   );
