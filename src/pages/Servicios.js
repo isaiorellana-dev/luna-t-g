@@ -1,17 +1,17 @@
 import { React, Fragment, useState } from "react";
 import ServiciosCard from "@components/ServiciosCard";
-import rellenoUno from "@img/relleno-1.png";
-import rellenoDos from "@img/relleno-2.png";
-import rellenoTres from "@img/relleno-3.png";
-import rellenoCuatro from "@img/relleno-4.png";
-import transes from "@img/guillermo-mochila-300.png";
-import transesLow from "@img/guillermo-mochila-190.png";
-import comidaCard from "@img/comida-card-400.jpg";
-import comidaCardLow from "@img/comida-card-300.jpg";
-import superCard from "@img/supermercado-card-400.jpg";
-import superCardLow from "@img/supermercado-card-300.jpg";
-import envioCard from "@img/envio-card-400.jpg";
-import envioCardLow from "@img/envio-card-300.jpg";
+import rellenoUno from "@img/relleno-1.avif";
+import rellenoDos from "@img/relleno-2.avif";
+import rellenoTres from "@img/relleno-3.avif";
+import rellenoCuatro from "@img/relleno-4.avif";
+import transes from "@img/guillermo-mochila-300.avif";
+import transesLow from "@img/guillermo-mochila-190.avif";
+import comidaCard from "@img/comida-card-400.avif";
+import comidaCardLow from "@img/comida-card-300.avif";
+import superCard from "@img/supermercado-card-400.avif";
+import superCardLow from "@img/supermercado-card-300.avif";
+import envioCard from "@img/envio-card-400.avif";
+import envioCardLow from "@img/envio-card-300.avif";
 import Button from "@components/common/Button";
 import "@styles/pages/Servicios.scss";
 const Servicios = () => {
@@ -37,7 +37,11 @@ const Servicios = () => {
             img={isMobile(380) || !isMobile(750) ? comidaCardLow : comidaCard}
           />
           {!isMobile(750) && (
-            <img src={rellenoUno} className="img-relleno"></img>
+            <img
+              src={rellenoUno}
+              className="img-relleno"
+              alt="luna-to-go"
+            ></img>
           )}
           <ServiciosCard
             titulo="Envíos"
@@ -45,7 +49,11 @@ const Servicios = () => {
             img={isMobile(380) || !isMobile(750) ? envioCardLow : envioCard}
           />
           {!isMobile(750) && (
-            <img src={rellenoTres} className="img-relleno"></img>
+            <img
+              src={rellenoTres}
+              className="img-relleno"
+              alt="luna-to-go"
+            ></img>
           )}
           <ServiciosCard
             titulo="Compras"
@@ -53,13 +61,18 @@ const Servicios = () => {
             img={isMobile(380) || !isMobile(750) ? superCardLow : superCard}
           />
           {!isMobile(750) && (
-            <img src={rellenoDos} className="img-relleno"></img>
+            <img
+              src={rellenoDos}
+              className="img-relleno"
+              alt="luna-to-go"
+            ></img>
           )}
           {!isMobile(750) && (
             <img
               src={rellenoCuatro}
               className="img-relleno"
               id="relleno-4"
+              alt="luna-to-go"
             ></img>
           )}
           <ServiciosCard

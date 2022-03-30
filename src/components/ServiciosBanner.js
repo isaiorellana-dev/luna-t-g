@@ -1,13 +1,13 @@
 import React from "react";
 import IconServices from "./common/IconServices";
-import medicina from "@img/medicina.png";
-import mercado from "@img/mercado.png";
-import regalo from "@img/regalo.png";
-import paquetes from "@img/paquetes.png";
-import transacciones from "@img/transacciones.png";
-import ferreteria from "@img/ferreteria.png";
-import bebidas from "@img/bebidas.png";
-import comida from "@img/comida.png";
+import medicina from "@img/medicina.avif";
+import mercado from "@img/mercado.avif";
+import regalo from "@img/regalo.avif";
+import paquetes from "@img/paquetes.avif";
+import transacciones from "@img/transacciones.avif";
+import ferreteria from "@img/ferreteria.avif";
+import bebidas from "@img/bebidas.avif";
+import comida from "@img/comida.avif";
 import Background from "@containers/Background";
 
 import "@styles/components/ServiciosBanner.scss";

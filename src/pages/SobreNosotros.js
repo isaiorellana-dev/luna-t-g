@@ -1,5 +1,7 @@
 import React from "react";
-import grupal from "@img/grupal-1.png";
+import grupalBig from "@img/grupal-1-880.avif";
+import grupalMedium from "@img/grupal-1-600.avif";
+import grupalShort from "@img/grupal-1-300.avif";
 import "@styles/pages/SobreNosotros.scss";
 
 const SobreNosotros = () => {
@@ -7,7 +9,12 @@ const SobreNosotros = () => {
     <section className="sobre-nosotros__container">
       <h1>Sobre Nosotros</h1>
       <div>
-        <img src={grupal}></img>
+        <picture>
+          <source media="(min-width: 900px)" srcSet="{grupalMedium}" />
+          <source media="(min-width: 600px)" srcSet="{grupalBig}" />
+          <source media="(min-width: 400px)" srcSet="{grupalMedium}" />
+          <img src="{grupalShort}" alt="Luna to go Personal" />
+        </picture>
 
         <div>
           <h2>Misión</h2>

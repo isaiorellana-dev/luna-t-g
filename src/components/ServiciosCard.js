@@ -11,7 +11,7 @@ const ServiciosCard = ({ titulo, text, img, clase }) => {
           <p>{text}</p>
         </div>
         <div className="img-container">
-          <img src={img}></img>
+          <img src={img} alt="luna-to-go"></img>
         </div>
       </article>
     </Fragment>

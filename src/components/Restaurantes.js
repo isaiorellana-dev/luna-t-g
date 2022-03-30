@@ -1,11 +1,11 @@
 import React from "react";
-import internacional from "@img/inter.jpg";
-import rosty from "@img/rosty.jpg";
-import superpollos from "@img/superpollos.jpg";
-import chino from "@img/chino.jpg";
-import chyrs from "@img/chyrs.jpg";
-import profegrill from "@img/profe.jpg";
-import danielBolsa from "@img/guillermo-chavito.png";
+import internacional from "@img/inter.avif";
+import rosty from "@img/rosty.avif";
+import superpollos from "@img/superpollos.avif";
+import chino from "@img/chino.avif";
+import chyrs from "@img/chyrs.avif";
+import profegrill from "@img/profe.avif";
+import danielBolsa from "@img/guillermo-chavito.avif";
 import Background from "@containers/Background";
 import "@styles/components/Restaurantes.scss";
 
