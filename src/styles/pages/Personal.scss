@@ -40,15 +40,10 @@
     background-size: cover;
   }
 }
-@media (max-width: 600px) {
-  .personal-banner {
-    background: url(@img/banner-personal-600.jpg) center no-repeat;
-    background-size: cover;
-  }
-}
 @media (max-width: 400px) {
   .personal-banner {
-    background: url(@img/banner-personal-400.jpg) center no-repeat;
+    height: 200px;
+    background: url(@img/banner-personal-600.jpg) center no-repeat;
     background-size: cover;
   }
 }
