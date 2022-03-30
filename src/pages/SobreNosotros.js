@@ -1,7 +1,7 @@
 import React from "react";
-import grupalBig from "@img/grupal-1-880.avif";
-import grupalMedium from "@img/grupal-1-600.avif";
-import grupalShort from "@img/grupal-1-300.avif";
+import grupalBig from "@img/grupal-1-880.png";
+import grupalMedium from "@img/grupal-1-600.png";
+import grupalShort from "@img/grupal-1-300.png";
 import "@styles/pages/SobreNosotros.scss";
 
 const SobreNosotros = () => {
