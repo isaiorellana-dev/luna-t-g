@@ -86,7 +86,7 @@ const Servicios = () => {
       <section className="servicios__second-container">
         <div>
           <h2>Horarios</h2>
-          <p>De Lunes a Domingo de 9 A.M a 9 P.M</p>
+          <p>De Lunes a Domingo de 8 A.M a 9:30 P.M</p>
         </div>
         <div>
           <h2>¿Qué esperas?</h2>

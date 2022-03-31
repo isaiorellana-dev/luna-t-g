@@ -32,10 +32,10 @@ const SobreNosotros = () => {
         </div>
         <h2>Nuestra Historia</h2>
         <p>
-          Luna to go es un servicio de delivery, fundado en 2020 por Roger Luna
+          Luna to go es un servicio de delivery, fundado en 2021 por Roger Luna
           en la ciudad de Morazán, Yoro. Brindando a la comunidad local una
           solución efectiva para realizar envíos de forma rápida, segura y lo
-          mas importante sin tener que salir de casa. Luna To Go contribuyo a
+          mas importante sin tener que salir de casa. Luna To Go contribuyó a
           que el comercio siguiera saliendo adelante a pesar de la pandemia, ya
           que durante la cuarentena la gente no podia ir a lugares cerrados ni
           hacer aglomeraciones, pero la gente necesitaba realizar compras, hacer
