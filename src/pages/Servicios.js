@@ -1,9 +1,9 @@
 import { React, Fragment, useState } from "react";
 import ServiciosCard from "@components/ServiciosCard";
-import rellenoUno from "@img/relleno-1.avif";
-import rellenoDos from "@img/relleno-2.avif";
-import rellenoTres from "@img/relleno-3.avif";
-import rellenoCuatro from "@img/relleno-4.avif";
+import rellenoUno from "@img/relleno-1.png";
+import rellenoDos from "@img/relleno-2.png";
+import rellenoTres from "@img/relleno-3.png";
+import rellenoCuatro from "@img/relleno-4.png";
 import transes from "@img/guillermo-mochila-300.png";
 import transesLow from "@img/guillermo-mochila-190.png";
 import comidaCard from "@img/comida-card-400.jpg";
