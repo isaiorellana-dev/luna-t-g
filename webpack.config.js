@@ -1,31 +1,31 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const { NetlifyPlugin } = require("netlify-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { NetlifyPlugin } = require('netlify-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
-    publicPath: "/",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    publicPath: '/',
   },
-  mode: "production",
+  mode: 'production',
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
     alias: {
-      "@components": path.resolve(__dirname, "src/components/"),
-      "@containers": path.resolve(__dirname, "src/containers/"),
-      "@pages": path.resolve(__dirname, "src/pages/"),
-      "@styles": path.resolve(__dirname, "src/styles/"),
-      "@icons": path.resolve(__dirname, "src/assets/icons/"),
-      "@img": path.resolve(__dirname, "src/assets/img/"),
-      "@fonts": path.resolve(__dirname, "src/assets/fonts/"),
-      "@hooks": path.resolve(__dirname, "src/hooks/"),
-      "@context": path.resolve(__dirname, "src/context/"),
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@containers': path.resolve(__dirname, 'src/containers/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+      '@img': path.resolve(__dirname, 'src/assets/img/'),
+      '@fonts': path.resolve(__dirname, 'src/assets/fonts/'),
+      '@hooks': path.resolve(__dirname, 'src/hooks/'),
+      '@context': path.resolve(__dirname, 'src/context/'),
     },
   },
   module: {
@@ -33,7 +33,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
         exclude: /node_modules/,
       },
@@ -41,35 +41,35 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
           },
         ],
       },
       {
         test: /\.(css|scss)$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif|avif)$/,
-        type: "asset",
+        type: 'asset',
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: "./public/index.html",
-      filename: "index.html",
+      template: './public/index.html',
+      filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: '[name].css',
     }),
     new CleanWebpackPlugin(),
     new NetlifyPlugin({
       redirects: [
         {
-          from: "/*",
-          to: "/index.html",
+          from: '/*',
+          to: '/index.html',
           status: 200,
           force: false,
         },

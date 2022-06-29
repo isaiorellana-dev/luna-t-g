@@ -1,9 +1,9 @@
-import React from "react";
-import Button from "@components/common/Button";
+import React from 'react';
+import Button from '@components/common/Button';
 
-import "@styles/components/MainBanner.scss";
+import '@styles/components/MainBanner.scss';
 
-const MainBanner = () => {
+function MainBanner() {
   return (
     <section className="MainBanner">
       <div className="content">
@@ -13,11 +13,11 @@ const MainBanner = () => {
           className="MainBanner__button"
           text="Pide Ahora"
           link="/Pedidos"
-          routing={true}
+          routing
         />
       </div>
     </section>
   );
-};
+}
 
 export default MainBanner;

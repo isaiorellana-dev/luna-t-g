@@ -1,26 +1,26 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
   },
-  mode: "development",
+  mode: 'development',
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
     alias: {
-      "@components": path.resolve(__dirname, "src/components/"),
-      "@containers": path.resolve(__dirname, "src/containers/"),
-      "@pages": path.resolve(__dirname, "src/pages/"),
-      "@styles": path.resolve(__dirname, "src/styles/"),
-      "@icons": path.resolve(__dirname, "src/assets/icons/"),
-      "@img": path.resolve(__dirname, "src/assets/img/"),
-      "@fonts": path.resolve(__dirname, "src/assets/fonts/"),
-      "@hooks": path.resolve(__dirname, "src/hooks/"),
-      "@context": path.resolve(__dirname, "src/context/"),
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@containers': path.resolve(__dirname, 'src/containers/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+      '@img': path.resolve(__dirname, 'src/assets/img/'),
+      '@fonts': path.resolve(__dirname, 'src/assets/fonts/'),
+      '@hooks': path.resolve(__dirname, 'src/hooks/'),
+      '@context': path.resolve(__dirname, 'src/context/'),
     },
   },
   module: {
@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
         exclude: /node_modules/,
       },
@@ -36,36 +36,36 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
           },
         ],
       },
       {
         test: /\.(css|scss)$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif|avif)$/,
-        type: "asset",
+        type: 'asset',
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
-      filename: "./index.html",
+      template: './public/index.html',
+      filename: './index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: '[name].css',
     }),
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, 'dist'),
     },
     historyApiFallback: true,
     compress: true,
-    port: 8080,
+    port: 8000,
     open: true,
   },
 };

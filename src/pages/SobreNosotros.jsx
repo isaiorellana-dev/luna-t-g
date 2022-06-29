@@ -1,19 +1,19 @@
-import React from "react";
-import grupalBig from "@img/grupal-1-880.png";
-import grupalMedium from "@img/grupal-1-600.png";
-import grupalShort from "@img/grupal-1-300.png";
-import "@styles/pages/SobreNosotros.scss";
+import React from 'react';
+import grupalBig from '@img/grupal-1-880.png';
+import grupalMedium from '@img/grupal-1-600.png';
+import grupalShort from '@img/grupal-1-300.png';
+import '@styles/pages/SobreNosotros.scss';
 
-const SobreNosotros = () => {
+function SobreNosotros() {
   return (
     <section className="sobre-nosotros__container">
       <h1>Sobre Nosotros</h1>
       <div>
         <picture>
-          <source media="(min-width: 900px)" srcSet={grupalMedium}></source>
-          <source media="(min-width: 600px)" srcSet={grupalBig}></source>
-          <source media="(min-width: 400px)" srcSet={grupalMedium}></source>
-          <img src={grupalShort} alt="Luna to go Personal"></img>
+          <source media="(min-width: 900px)" srcSet={grupalMedium} />
+          <source media="(min-width: 600px)" srcSet={grupalBig} />
+          <source media="(min-width: 400px)" srcSet={grupalMedium} />
+          <img src={grupalShort} alt="Luna to go Personal" />
         </picture>
 
         <div>
@@ -49,6 +49,6 @@ const SobreNosotros = () => {
       </div>
     </section>
   );
-};
+}
 
 export default SobreNosotros;

@@ -1,9 +1,9 @@
-import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import "@styles/components/Header.scss";
-import logo from "@img/logo-horizontal.png";
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import '@styles/components/Header.scss';
+import logo from '@img/logo-horizontal.png';
 
-const Header = () => {
+function Header() {
   //* Estados de React
   // 1. Estado para saber el ancho de la ventana
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
@@ -11,7 +11,7 @@ const Header = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
   // 3. Evento para saber cuando se cambia el ancho de la ventana, cuando cambia este evento actualiza el valor del estado creado arriba en el inciso 1.
-  window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+  window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
 
   // 4. Función para actualizar el estado del menu (inciso 2).
   const handleToggleMenu = () => {
@@ -24,23 +24,22 @@ const Header = () => {
     // Utiliza el valor del estado creado en el inciso 1 para comprobar si es menor a un valor dado.
     if (windowWidth < size) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   };
 
   return (
     <header>
       <Link to="/">
-        <img src={logo}></img>
+        <img src={logo} />
       </Link>
-      <nav className={`${!isMobile(760) || toggleMenu ? null : "hide"}`}>
+      <nav className={`${!isMobile(760) || toggleMenu ? null : 'hide'}`}>
         <ul>
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "link-activo" : undefined
+                isActive ? 'link-activo' : undefined
               }
               onClick={handleToggleMenu}
             >
@@ -51,7 +50,7 @@ const Header = () => {
             <NavLink
               to="Servicios"
               className={({ isActive }) =>
-                isActive ? "link-activo" : undefined
+                isActive ? 'link-activo' : undefined
               }
               onClick={handleToggleMenu}
             >
@@ -62,7 +61,7 @@ const Header = () => {
             <NavLink
               to="SobreNosotros"
               className={({ isActive }) =>
-                isActive ? "link-activo" : undefined
+                isActive ? 'link-activo' : undefined
               }
               onClick={handleToggleMenu}
             >
@@ -73,7 +72,7 @@ const Header = () => {
             <NavLink
               to="Pedidos"
               className={({ isActive }) =>
-                isActive ? "link-activo" : undefined
+                isActive ? 'link-activo' : undefined
               }
               onClick={handleToggleMenu}
             >
@@ -84,7 +83,7 @@ const Header = () => {
             <NavLink
               to="Personal"
               className={({ isActive }) =>
-                isActive ? "link-activo" : undefined
+                isActive ? 'link-activo' : undefined
               }
               onClick={handleToggleMenu}
             >
@@ -97,7 +96,7 @@ const Header = () => {
         //* Botón hamburguesa, se renderiza solo si el tamaño de la ventana es menor a 760px. y contiene en el evento onClick la función para abrir o cerrar el menu.
         isMobile(760) && (
           <button
-            className={`${toggleMenu ? "equis" : "burger"}`}
+            className={`${toggleMenu ? 'equis' : 'burger'}`}
             id="btn-menu"
             onClick={handleToggleMenu}
           />
@@ -105,6 +104,6 @@ const Header = () => {
       }
     </header>
   );
-};
+}
 
 export default Header;

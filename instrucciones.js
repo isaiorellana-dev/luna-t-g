@@ -23,15 +23,15 @@
 // * Code Runner
 // La extension que sirve para correr código JavaScript, solo seleccionas el código que querés correr haces un click derecho y seleccionas "Run Code"
 // Haz el intento con el código de abajo y vemos que pasa
-const mensaje = "Esperando que venga el desarrollador";
+const mensaje = 'Esperando que venga el desarrollador';
 const desarrolladores = [
   {
-    nombre: "Isai",
-    apellido: "Orellana",
+    nombre: 'Isai',
+    apellido: 'Orellana',
   },
   {
-    nombre: "David",
-    apellido: "Nuñez",
+    nombre: 'David',
+    apellido: 'Nuñez',
   },
 ];
 console.log(

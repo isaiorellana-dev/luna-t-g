@@ -1,33 +1,33 @@
-import { React, Fragment, useState } from "react";
-import ServiciosCard from "@components/ServiciosCard";
-import rellenoUno from "@img/relleno-1.png";
-import rellenoDos from "@img/relleno-2.png";
-import rellenoTres from "@img/relleno-3.png";
-import rellenoCuatro from "@img/relleno-4.png";
-import transes from "@img/guillermo-mochila-300.png";
-import transesLow from "@img/guillermo-mochila-190.png";
-import comidaCard from "@img/comida-card-400.jpg";
-import comidaCardLow from "@img/comida-card-300.jpg";
-import superCard from "@img/supermercado-card-400.jpg";
-import superCardLow from "@img/supermercado-card-300.jpg";
-import envioCard from "@img/envio-card-400.jpg";
-import envioCardLow from "@img/envio-card-300.jpg";
-import Button from "@components/common/Button";
-import "@styles/pages/Servicios.scss";
-const Servicios = () => {
+import { React, Fragment, useState } from 'react';
+import ServiciosCard from '@components/ServiciosCard';
+import rellenoUno from '@img/relleno-1.png';
+import rellenoDos from '@img/relleno-2.png';
+import rellenoTres from '@img/relleno-3.png';
+import rellenoCuatro from '@img/relleno-4.png';
+import transes from '@img/guillermo-mochila-300.png';
+import transesLow from '@img/guillermo-mochila-190.png';
+import comidaCard from '@img/comida-card-400.jpg';
+import comidaCardLow from '@img/comida-card-300.jpg';
+import superCard from '@img/supermercado-card-400.jpg';
+import superCardLow from '@img/supermercado-card-300.jpg';
+import envioCard from '@img/envio-card-400.jpg';
+import envioCardLow from '@img/envio-card-300.jpg';
+import Button from '@components/common/Button';
+import '@styles/pages/Servicios.scss';
+
+function Servicios() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+  window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
 
   const isMobile = (size) => {
     if (windowWidth < size) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   };
   return (
-    <Fragment>
+    <>
       <section>
         <h1>Nuestros Servicios:</h1>
         <div className="servicios__first-container">
@@ -37,11 +37,7 @@ const Servicios = () => {
             img={isMobile(380) || !isMobile(750) ? comidaCardLow : comidaCard}
           />
           {!isMobile(750) && (
-            <img
-              src={rellenoUno}
-              className="img-relleno"
-              alt="luna-to-go"
-            ></img>
+            <img src={rellenoUno} className="img-relleno" alt="luna-to-go" />
           )}
           <ServiciosCard
             titulo="Envíos"
@@ -49,11 +45,7 @@ const Servicios = () => {
             img={isMobile(380) || !isMobile(750) ? envioCardLow : envioCard}
           />
           {!isMobile(750) && (
-            <img
-              src={rellenoTres}
-              className="img-relleno"
-              alt="luna-to-go"
-            ></img>
+            <img src={rellenoTres} className="img-relleno" alt="luna-to-go" />
           )}
           <ServiciosCard
             titulo="Compras"
@@ -61,11 +53,7 @@ const Servicios = () => {
             img={isMobile(380) || !isMobile(750) ? superCardLow : superCard}
           />
           {!isMobile(750) && (
-            <img
-              src={rellenoDos}
-              className="img-relleno"
-              alt="luna-to-go"
-            ></img>
+            <img src={rellenoDos} className="img-relleno" alt="luna-to-go" />
           )}
           {!isMobile(750) && (
             <img
@@ -73,7 +61,7 @@ const Servicios = () => {
               className="img-relleno"
               id="relleno-4"
               alt="luna-to-go"
-            ></img>
+            />
           )}
           <ServiciosCard
             titulo="Transacciones Bancarias"
@@ -94,12 +82,12 @@ const Servicios = () => {
             className="MainBanner__button"
             text="Pide Ya!!"
             link="/Pedidos"
-            routing={true}
+            routing
           />
         </div>
       </section>
-    </Fragment>
+    </>
   );
-};
+}
 
 export default Servicios;

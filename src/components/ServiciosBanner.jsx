@@ -1,28 +1,27 @@
-import React from "react";
-import IconServices from "./common/IconServices";
-import medicina from "@img/medicina.png";
-import mercado from "@img/mercado.png";
-import regalo from "@img/regalo.png";
-import paquetes from "@img/paquetes.png";
-import transacciones from "@img/transacciones.png";
-import ferreteria from "@img/ferreteria.png";
-import bebidas from "@img/bebidas.png";
-import comida from "@img/comida.png";
-import Background from "@containers/Background";
+import React from 'react';
+import medicina from '@img/medicina.png';
+import mercado from '@img/mercado.png';
+import regalo from '@img/regalo.png';
+import paquetes from '@img/paquetes.png';
+import transacciones from '@img/transacciones.png';
+import ferreteria from '@img/ferreteria.png';
+import bebidas from '@img/bebidas.png';
+import comida from '@img/comida.png';
+import Background from '@containers/Background';
+import IconServices from './common/IconServices';
 
-import "@styles/components/ServiciosBanner.scss";
+import '@styles/components/ServiciosBanner.scss';
 
-const ServiciosBanner = () => {
+function ServiciosBanner() {
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
-  window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+  window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
 
   const isMobile = (size) => {
     if (windowWidth < size) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   };
   return (
     <section className="services-banner">
@@ -42,6 +41,6 @@ const ServiciosBanner = () => {
       {!isMobile(1200) && <Background />}
     </section>
   );
-};
+}
 
 export default ServiciosBanner;

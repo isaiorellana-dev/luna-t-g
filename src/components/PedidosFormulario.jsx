@@ -1,25 +1,25 @@
-import React from "react";
+import React from 'react';
 
-import "@styles/components/PedidosFormulario.scss";
+import '@styles/components/PedidosFormulario.scss';
 
-const PedidosFormulario = () => {
+function PedidosFormulario() {
   const [fase, setFase] = React.useState(1);
-  const [tipoPedido, setTipoPedido] = React.useState("Comida");
-  const [lugar, setLugar] = React.useState("Morazán");
-  const [negocio, setNegocio] = React.useState("");
-  const [nombre, setNombre] = React.useState("");
-  const [direccion, setDireccion] = React.useState("");
+  const [tipoPedido, setTipoPedido] = React.useState('Comida');
+  const [lugar, setLugar] = React.useState('Morazán');
+  const [negocio, setNegocio] = React.useState('');
+  const [nombre, setNombre] = React.useState('');
+  const [direccion, setDireccion] = React.useState('');
   const [productos, setProductos] = React.useState([
     {
       item: 1,
       count: 1,
-      name: "",
+      name: '',
     },
   ]);
   const addProducto = () => {
     setProductos([
       ...productos,
-      { item: productos.length + 1, count: 1, name: "" },
+      { item: productos.length + 1, count: 1, name: '' },
     ]);
   };
 
@@ -35,30 +35,20 @@ const PedidosFormulario = () => {
   };
 
   const productoToString = () => {
-    let productosString = "";
+    let productosString = '';
     productos.forEach((producto) => {
       productosString += `${producto.count} ${producto.name}%0A`;
     });
     return productosString;
   };
 
-  const msg = () => {
-    return `Hola, quiero hacer un pedido en ${negocio}:%0A${productoToString()}A nombre de: *${nombre}*%0ADireccion: ${direccion}`;
-  };
+  const msg = () =>
+    `Hola, quiero hacer un pedido en ${negocio}:%0A${productoToString()}A nombre de: *${nombre}*%0ADireccion: ${direccion}`;
 
-  const phone = () => {
-    if (lugar === "Morazán") {
-      return "+50494504185";
-    } else {
-      return "+50496352170";
-    }
-  };
-
-  const URL = () => {
-    return `https://api.whatsapp.com/send?phone=${phone()}&text=${msg()}&source=&data=`;
-  };
+  const URL = () =>
+    `https://api.whatsapp.com/send?phone=+50494504185&text=${msg()}&source=&data=`;
   const enviar = () => {
-    window.open(URL(), "_blank");
+    window.open(URL(), '_blank');
   };
 
   return (
@@ -68,7 +58,7 @@ const PedidosFormulario = () => {
       }}
     >
       <button
-        className={fase === 1 ? "fase-inactiva" : "volver-btn"}
+        className={fase === 1 ? 'fase-inactiva' : 'volver-btn'}
         onClick={() => {
           (fase === 3 && setFase(2)) || (fase === 2 && setFase(1));
         }}
@@ -78,20 +68,9 @@ const PedidosFormulario = () => {
       {/* //* Fase 1: */}
       <div
         className={`form__fase-1 ${
-          fase === 1 ? "fase-activa" : "fase-inactiva"
+          fase === 1 ? 'fase-activa' : 'fase-inactiva'
         }`}
       >
-        <label htmlFor="tipo-de-pedido">Selecciona el lugar</label>
-        <select
-          name="lugar"
-          id="lugar"
-          required
-          onChange={(e) => setLugar(e.target.value)}
-        >
-          <option>Morazán</option>
-          <option>El Negrito</option>
-        </select>
-
         <label htmlFor="tipo-de-pedido">Selecciona el tipo de Pedido</label>
         <select
           name="tipo-de-pedido"
@@ -117,32 +96,32 @@ const PedidosFormulario = () => {
       {/* //* Fase 2: */}
       <div
         className={`form__fase-2 ${
-          fase === 2 ? "fase-activa" : "fase-inactiva"
+          fase === 2 ? 'fase-activa' : 'fase-inactiva'
         }`}
       >
         <div className="form__fase-2--negocio">
           <label htmlFor="negocio">
-            {(tipoPedido === "Comida" && "Restaurante") ||
-              (tipoPedido === "Compras en supermercado, bodega o tienda" &&
-                "Supermercado, bodega o tienda") ||
-              (tipoPedido === "Pedido listo en una tienda" && "Tienda") ||
-              (tipoPedido === "Envió personalizado" &&
-                "¿Donde quieres que recojan tu envió?")}
+            {(tipoPedido === 'Comida' && 'Restaurante') ||
+              (tipoPedido === 'Compras en supermercado, bodega o tienda' &&
+                'Supermercado, bodega o tienda') ||
+              (tipoPedido === 'Pedido listo en una tienda' && 'Tienda') ||
+              (tipoPedido === 'Envió personalizado' &&
+                '¿Donde quieres que recojan tu envió?')}
           </label>
           <input
             id="negocio"
             required
             placeholder={
-              (tipoPedido === "Comida" && "Ingresa aqui el restaurante") ||
-              (tipoPedido === "Compras en supermercado, bodega o tienda" &&
-                "Ingresa aquí el supermercado, bodega o tienda") ||
-              (tipoPedido === "Pedido listo en una tienda" &&
-                "Ingresa aquí la tienda") ||
-              (tipoPedido === "Envió personalizado" &&
-                "Escribe aquí la dirección")
+              (tipoPedido === 'Comida' && 'Ingresa aqui el restaurante') ||
+              (tipoPedido === 'Compras en supermercado, bodega o tienda' &&
+                'Ingresa aquí el supermercado, bodega o tienda') ||
+              (tipoPedido === 'Pedido listo en una tienda' &&
+                'Ingresa aquí la tienda') ||
+              (tipoPedido === 'Envió personalizado' &&
+                'Escribe aquí la dirección')
             }
             onChange={(e) => setNegocio(e.target.value)}
-          ></input>
+          />
         </div>
         <div className="form__fase-2--producto">
           {productos.map((producto) => (
@@ -155,7 +134,7 @@ const PedidosFormulario = () => {
                 onChange={(e) => {
                   replaceCantidad(producto.item - 1, e);
                 }}
-              ></input>
+              />
               <input
                 type="text"
                 placeholder="Ingresa un producto"
@@ -163,7 +142,7 @@ const PedidosFormulario = () => {
                 onChange={(e) => {
                   replaceProducto(producto.item - 1, e);
                 }}
-              ></input>
+              />
             </div>
           ))}
           <div className="add-delete__container">
@@ -185,7 +164,7 @@ const PedidosFormulario = () => {
       {/* //* Fase 3: */}
       <div
         className={`form__fase-3 ${
-          fase === 3 ? "fase-activa" : "fase-inactiva"
+          fase === 3 ? 'fase-activa' : 'fase-inactiva'
         }`}
       >
         <label htmlFor="nombre">A nombre de quien ira el pedido?</label>
@@ -194,41 +173,44 @@ const PedidosFormulario = () => {
           id="nombre"
           placeholder="Ingresa aqui el nombre"
           onChange={(e) => setNombre(e.target.value)}
-        ></input>
+        />
         <label htmlFor="direccion">Dirección</label>
         <input
           placeholder="Escribe aquí la dirección"
           id="direccion"
           onChange={(e) => setDireccion(e.target.value)}
-        ></input>
+        />
       </div>
       <button
         type="submit"
         onClick={() => {
-          if (negocio === "") {
+          if (negocio === '') {
             return null;
-          } else if (productos.some((productos) => productos.name === "")) {
+          }
+          if (productos.some((productos) => productos.name === '')) {
             return null;
-          } else if (productos.some((productos) => productos.count < 1)) {
+          }
+          if (productos.some((productos) => productos.count < 1)) {
             return null;
-          } else if (fase === 2) {
+          }
+          if (fase === 2) {
             setFase(3);
-          } else if (nombre === "") {
-            return alert("Por favor ingrese su nombre");
-          } else if (direccion === "") {
-            return alert("Por favor ingrese su dirección");
+          } else if (nombre === '') {
+            return alert('Por favor ingrese su nombre');
+          } else if (direccion === '') {
+            return alert('Por favor ingrese su dirección');
           } else {
             enviar();
           }
         }}
         className={`${
-          fase === 1 ? "fase-inactiva" : undefined
+          fase === 1 ? 'fase-inactiva' : undefined
         } button-continuar `}
       >
-        {(fase === 3 && "Enviar") || (fase === 2 && "Continuar")}
+        {(fase === 3 && 'Enviar') || (fase === 2 && 'Continuar')}
       </button>
     </form>
   );
-};
+}
 
 export default PedidosFormulario;

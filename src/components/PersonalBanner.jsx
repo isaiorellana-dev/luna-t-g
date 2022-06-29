@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-const PersonalBanner = () => {
+function PersonalBanner() {
   return (
     <section className="personal-banner">
       <h1>Personal</h1>
     </section>
   );
-};
+}
 
 export default PersonalBanner;

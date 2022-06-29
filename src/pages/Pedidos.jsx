@@ -1,9 +1,9 @@
-import React from "react";
-import PedidosFormulario from "@components/PedidosFormulario";
-import PedidosMockup from "@components/PedidosMockup";
-import "@styles/pages/Pedidos.scss";
+import React from 'react';
+import PedidosFormulario from '@components/PedidosFormulario';
+import PedidosMockup from '@components/PedidosMockup';
+import '@styles/pages/Pedidos.scss';
 
-const Pedidos = () => {
+function Pedidos() {
   return (
     <div className="pedidos__main-container">
       <section>
@@ -22,6 +22,6 @@ const Pedidos = () => {
       </section>
     </div>
   );
-};
+}
 
 export default Pedidos;
