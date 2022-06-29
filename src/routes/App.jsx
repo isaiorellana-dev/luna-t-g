@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Inicio from '../pages/Inicio';
 import Servicios from '../pages/Servicios';
+import LFFInfo from '../components/LFFInfo';
 import SobreNosotros from '../pages/SobreNosotros';
 import Pedidos from '../pages/Pedidos';
 import NotFound from '../pages/NotFound';
@@ -13,7 +14,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="" element={<Inicio />} />
+          <Route path="" element={<Inicio />}>
+            <Route path="/luna-food-fest" element={<LFFInfo />} />
+          </Route>
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/sobrenosotros" element={<SobreNosotros />} />
           <Route path="/pedidos" element={<Pedidos />} />
