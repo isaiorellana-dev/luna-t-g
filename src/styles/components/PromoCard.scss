@@ -1,0 +1,72 @@
+.combos-info {
+  width: 100%;
+  .cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .promo-card {
+    position: relative;
+    max-width: 360px;
+    padding: 5px;
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    .food {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .text-container {
+      padding: 0 8px 0 8px;
+      p {
+        padding: 5px 0 0 0;
+      }
+      .title {
+        font-family: Inconsolata, sans-serif;
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: black;
+      }
+      .descripcion {
+        font-size: 1.6rem;
+        color: #7c7777;
+        line-height: 1.8rem;
+      }
+      .current-info {
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-size: 1.6rem;
+          color: black;
+          span {
+            color: #7c7777;
+          }
+        }
+        :nth-child(2) {
+          text-align: right;
+        }
+      }
+      .price-info {
+        display: flex;
+        align-items: center;
+        p {
+          padding-left: 8px;
+          color: black;
+          font-size: 1.6rem;
+          font-family: Inconsolata, sans-serif;
+        }
+        img {
+          width: 30px;
+          height: fit-content;
+        }
+      }
+    }
+    a {
+      // display: none;
+      font-size: 1.6rem;
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+    }
+  }
+}
