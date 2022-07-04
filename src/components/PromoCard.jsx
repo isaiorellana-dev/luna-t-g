@@ -1,32 +1,40 @@
 import React from 'react';
 import Button from '@components/common/Button.jsx';
-import marys from '@img/marys-ribs.jpg';
 import food from '@icons/food.svg';
 import envio from '@icons/envio.svg';
 import money from '@icons/money.svg';
 import '@styles/components/PromoCard.scss';
 
-function PromoCard() {
+function PromoCard({
+  nombre,
+  descripcion,
+  from,
+  fecha,
+  precio,
+  img,
+  disponible,
+}) {
+  const msg = `https://api.whatsapp.com/send?phone=+50494504185&text=Hola, quiero hacer un pedido de ${nombre} de ${from} de la promoción del Luna Food Fest&source=&data=`;
+
   return (
     <div className="promo-card">
-      <img className="food" src={marys} alt="marys-ribs" />
+      <img className="food" src={img} alt={nombre} />
       <div className="text-container">
-        <p className="title">Baby ribs en salsa BBQ</p>
-        <p className="descripcion">
-          Costillas BBQ, pure de papa, Arroz blanco, salsa ranch, salsa de
-          jalapeño y ensalada.
-        </p>
+        <p className="title">{nombre}</p>
+        <p className="descripcion">{descripcion}</p>
         <div className="current-info">
           <p>
-            <span>from </span>Mary's Grill
+            <span>from </span>
+            {from}
           </p>
           <p>
-            <span>disponible </span>8/7/22
+            <span>disponible </span>
+            {fecha}
           </p>
         </div>
         <div className="price-info">
           <img src={food} alt="" />
-          <p>Comida: 160 L</p>
+          <p>Comida: {precio} L</p>
         </div>
         <div className="price-info">
           <img src={envio} alt="" />
@@ -34,10 +42,10 @@ function PromoCard() {
         </div>
         <div className="price-info">
           <img src={money} alt="" />
-          <p>Total: 180 L</p>
+          <p>Total: {precio + 20} L</p>
         </div>
       </div>
-      <Button text="pedir" />
+      {disponible && <Button text="pedir" link={msg} />}
     </div>
   );
 }

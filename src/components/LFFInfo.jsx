@@ -1,6 +1,7 @@
 import React from 'react';
 import '@styles/components/LFFInfo.scss';
 import PromoCard from './PromoCard';
+import { promos } from '../promos/promos';
 
 function LFFInfo() {
   return (
@@ -8,7 +9,18 @@ function LFFInfo() {
       <div className="combos-info">
         <h2>Combos y promociones del Luna Food Fest</h2>
         <div className="cards-container">
-          <PromoCard />
+          {promos.map((e) => (
+            <PromoCard
+              key={e.nombre}
+              nombre={e.nombre}
+              descripcion={e.descripcion}
+              from={e.from}
+              fecha={e.fecha}
+              precio={e.precio}
+              img={e.img}
+              disponible={e.disponible}
+            />
+          ))}
         </div>
       </div>
 

@@ -3,10 +3,12 @@
   .cards-container {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
   .promo-card {
+    margin: 10px;
     position: relative;
     max-width: 360px;
     padding: 5px;
